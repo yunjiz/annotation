@@ -1,0 +1,19 @@
+plugins {
+    id "org.jetbrains.kotlin.jvm"
+    id "org.jetbrains.kotlin.plugin.jpa"
+    id "org.jetbrains.kotlin.kapt"
+    id "java-library"
+}
+
+dependencies {
+    implementation platform('org.jetbrains.kotlin:kotlin-bom')
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8'
+    implementation 'org.jetbrains.kotlin:kotlin-reflect'
+
+    implementation 'com.squareup:kotlinpoet:1.8.0'
+    implementation "com.google.auto.service:auto-service:${autoserviceVersion}"
+    kapt "com.google.auto.service:auto-service:${autoserviceVersion}"
+}
+
+group = "me.yunji.annotation"
+version = "0.0.1"
